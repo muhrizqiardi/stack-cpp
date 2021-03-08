@@ -26,7 +26,8 @@ public:
     bool isFull();
 
     // Prints the top element of the stack
-    char peek();
+    // If the argument is false, then the function won't output the element through console
+    char peek(bool print);
 
     // Inserts an element to the stack, returns false if the stack is full, returns true otherwise
     bool push(char item);
@@ -77,7 +78,7 @@ char Stack::pop()
         return false;
 }
 
-char Stack::peek() {
-    std::cout << "\n" << stackArr[top];
+char Stack::peek(bool print) {
+    if (print) std::cout << "\n" << stackArr[top];
     return stackArr[top];
 }
