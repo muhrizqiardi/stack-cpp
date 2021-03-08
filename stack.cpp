@@ -89,6 +89,8 @@ int main()
     stack1.push(3);
     stack1.push(5);
     stack1.push(7);
+
+    // "Print" all elements in the stack by popping every element one by one from the top 
     while (stack1.top != -1) {
         stack1.peek();
         stack1.pop();
