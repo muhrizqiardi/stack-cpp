@@ -17,7 +17,7 @@ public:
     }
 
     // An array for stack, with maximum index of MAX_STACK
-    int stackArr[MAX_STACK];
+    char stackArr[MAX_STACK];
 
     // Returns true if the stack is empty or if top == -1
     bool isEmpty();
@@ -26,13 +26,13 @@ public:
     bool isFull();
 
     // Prints the top element of the stack
-    int peek();
+    char peek();
 
     // Inserts an element to the stack, returns false if the stack is full, returns true otherwise
-    bool push(int item);
+    bool push(char item);
 
     // Removes an element to the stack, returns the popped item if the stack isn't empty, returns false otherwise
-    int pop();
+    char pop();
 };
 
 bool Stack::isEmpty()
@@ -55,7 +55,7 @@ bool Stack::isFull()
         return false;
 }
 
-bool Stack::push(int item)
+bool Stack::push(char item)
 {
     if (!Stack::isFull())
     {
@@ -66,7 +66,7 @@ bool Stack::push(int item)
         return false;
 }
 
-int Stack::pop()
+char Stack::pop()
 {
     if (!Stack::isEmpty())
     {
@@ -77,23 +77,7 @@ int Stack::pop()
         return false;
 }
 
-int Stack::peek() {
+char Stack::peek() {
     std::cout << "\n" << stackArr[top];
     return stackArr[top];
-}
-
-int main()
-{
-    class Stack stack1;
-    stack1.push(1); // Pushing an item to the stack 
-    stack1.push(3);
-    stack1.push(5);
-    stack1.push(7);
-
-    // "Print" all elements in the stack by popping every element one by one from the top 
-    while (stack1.top != -1) {
-        stack1.peek();
-        stack1.pop();
-    }
-    return 0;
 }

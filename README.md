@@ -1,3 +1,3 @@
-# An Implementation of Stack with Array in C++
+# An Implementation of Stack in C++ and its Application
 
 All explanation and notes are commented within the code.
